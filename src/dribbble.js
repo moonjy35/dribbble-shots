@@ -34,12 +34,14 @@ const parseShot = ($elem) => {
 
   const img = $dribbleLink.find('img').attr('src').replace('_teaser', '');
   const comment = $dribbleOver.find('.comment').text();
+  const user = $attributionUser.find('.url').text().trim();
   const userLink = dribbleUrl + $attributionUser.find('.url').attr('href');
   const link = dribbleUrl + $dribbleLink.attr('href');
 
   return {
     img,
     comment,
+    user,
     userLink,
     link,
   };

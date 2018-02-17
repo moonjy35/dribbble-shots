@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "querystring": "^0.2.0",
@@ -18,16 +18,18 @@
   },
   "jest": {
     "verbose": true,
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["/node_modules/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
     "testRegex": "\\.spec\\.js$"
   },
-  "main": "index.js",
   "keywords": [
     "Dribbble"
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moonjy35/dribbble-shots.git"

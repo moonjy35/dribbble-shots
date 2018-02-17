@@ -17,14 +17,17 @@ test('get dribble url with queries, list?debuts, sort=views', () => {
   expect(url).toBe('https://dribbble.com/shots?list=debuts&sort=views');
 });
 
-test('shot must have img, userLink, link', async () => {
+test('shot must have img, user, userLink, link', async () => {
   const url = getDribbbleUrl({ list: DribbbleListType.ANIMATED, sort: DribbbleSortType.COMMENTS });
   const result = await getRequestBody(url);
   const { body } = result;
   const shots = getShots(body);
   const shot = shots[0];
 
+  console.log(shot);
+
   expect(shot.img).toMatch(/screenshots/);
+  expect(shot.user).toBeDefined();
   expect(shot.userLink).toMatch(/dribbble.com/);
   expect(shot.link).toMatch(/dribbble.com/);
 });
